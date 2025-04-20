@@ -43,7 +43,7 @@ class _aboutpageState extends State<AboutPage> {
             width: double.infinity,
             color: Colors.black,
             child: Image.asset(
-              'assets/images/about_back.jpeg',
+              'assets/images/template_bg_2.jpg',
               fit: BoxFit.cover,
             ),
           ),
@@ -71,8 +71,8 @@ class _aboutpageState extends State<AboutPage> {
                 child: Text(
                   "$name",
                   style: TextStyle(
-                    fontSize: 45,
-                    fontWeight: FontWeight.w400,
+                    fontSize: 50,
+                    fontWeight: FontWeight.w600,
                     fontFamily: 'DmSerif',
                     // fontStyle: FontStyle.italic,
                   ),
@@ -90,7 +90,7 @@ class _aboutpageState extends State<AboutPage> {
                     "${coffee_des[name]}",
                     // "A rich fusion of bold espresso, smooth steamed milk, and luscious chocolate syrup, the Mocha delivers a perfect balance of bittersweet and creamy flavors. Topped with a swirl of whipped cream, its pure indulgence in every sip"
                     style: TextStyle(
-                      fontSize: 15,
+                      fontSize: 16,
                       fontFamily: 'Playfair',
                       fontWeight: FontWeight.w600,
                       // fontStyle: FontStyle.italic,

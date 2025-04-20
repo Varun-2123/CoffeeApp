@@ -10,6 +10,20 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomePageState extends State<Homepage> {
+  String toTitleCase(String text) {
+    if (text.isEmpty) return text;
+    return text
+        .split(' ')
+        .map(
+          (word) =>
+              word.isNotEmpty
+                  ? '${word[0].toUpperCase()}${word.substring(1).toLowerCase()}'
+                  : '',
+        )
+        .join(' ');
+  }
+
+  final TextEditingController _controller = TextEditingController();
   final List<String> coffee_name = [
     "Americano",
     "Cappuccino",
@@ -53,6 +67,7 @@ class _HomePageState extends State<Homepage> {
               Padding(
                 padding: const EdgeInsets.only(left: 12.0, right: 12.0),
                 child: TextField(
+                  controller: _controller,
                   decoration: InputDecoration(
                     fillColor: Colors.white,
                     filled: true,
@@ -62,10 +77,27 @@ class _HomePageState extends State<Homepage> {
                       fontSize: 18,
                       fontWeight: FontWeight.w400,
                     ),
-                    suffixIcon: CircleAvatar(
-                      radius: 28,
-                      backgroundColor: const Color.fromARGB(255, 164, 105, 83),
-                      child: Icon(Icons.search, color: Colors.white),
+                    suffixIcon: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder:
+                                (context) =>
+                                    AboutPage(coffee_name: _controller.text),
+                          ),
+                        );
+                      },
+                      child: CircleAvatar(
+                        radius: 28,
+                        backgroundColor: const Color.fromARGB(
+                          255,
+                          164,
+                          105,
+                          83,
+                        ),
+                        child: Icon(Icons.search, color: Colors.white),
+                      ),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(width: 2, color: Colors.white),
