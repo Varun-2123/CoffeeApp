@@ -43,7 +43,7 @@ class _aboutpageState extends State<AboutPage> {
             width: double.infinity,
             color: Colors.black,
             child: Image.asset(
-              'assets/images/template_bg_2.jpg',
+              'assets/images/template_bg.jpg',
               fit: BoxFit.cover,
             ),
           ),
