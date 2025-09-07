@@ -1,6 +1,5 @@
 # DripDrop
-
-A new Flutter project.
+This Flutter project is a visually engaging mobile application that showcases information about different types of coffees. The primary focus of the project lies in delivering an appealing and user-friendly interface, making the UI the central highlight. Each screen is designed to present coffee details with elegant layouts, smooth navigation, and aesthetic design elements. By prioritizing visual presentation, the project demonstrates how Flutter can be leveraged to create modern, stylish, and responsive applications centered around a refined user experience.
 
 ## Getting Started
 
